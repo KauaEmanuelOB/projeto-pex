@@ -1,0 +1,69 @@
+.bloco {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    width: 100%;
+    margin: auto;
+}
+.bloco>h3 {
+    color: black;
+}
+.bloco-produtos {
+    gap: 5px;
+    display: flex;
+    padding: 5px 0px;
+    transition: transform 0.3s ease;
+}   
+.carrossel-corte {
+    overflow-x: auto;  
+}
+.carrossel-btn {
+    display: none;
+}
+
+@media (min-width: 1020px) {
+    .bloco {
+        min-width: 975px;
+        max-width: 80%;
+    }
+    .carrossel {
+        position: relative;
+    }
+    .bloco-produtos {
+        gap: 10px;
+    }
+    .carrossel-corte {
+        overflow: hidden;
+    }
+    .carrossel-btn {
+        background-color: inherit;
+        border: none;
+        width: 40px;
+        height: 40px;
+
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        cursor: pointer;
+    }
+    .prox {
+        right: -40px;
+    }
+    .ant {
+        left: -40px;
+    }
+}
+@media (min-width: 1220px) {
+    .bloco {
+        width: 1210px;
+    }
+    .btn-sumir {
+        display: none;
+    }
+}

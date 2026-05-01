@@ -1,0 +1,98 @@
+:root {
+    --cor1: #000000;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding: 30px 30px;
+    background-color: var(--cor1);
+    font-size: 1.1em;
+    color: white;
+}
+.transicao {
+    background-image: linear-gradient(#ffffff,var(--cor1));
+    height: 100px;
+    width: 100%;
+}
+footer>section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+    gap: 10px;
+    padding: 20px 0px;
+}
+footer .titulo {
+    font-size: 1.2em;
+}
+footer .btn-menu {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+}
+footer .itens-menu {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+    max-height: 0px;
+    position: relative;
+    transform: translateY(-100%);
+    overflow: hidden;
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+}
+footer .menu-aberto {
+    max-height: fit-content;
+    flex-direction: column;
+    transform: translateY(0%);
+    opacity: 1;
+}
+
+.canal {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+footer .itens-meios {
+    display: flex;
+    gap: 15px;
+}
+footer .itens-meios>div {
+    display: inline-block;
+    background-color: gray;
+    height: 25px;
+    width: 40px;
+}
+footer section>p {
+    display: none;
+}
+
+@media (min-width: 1050px) {
+    footer {
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+    }
+    footer>section {
+        padding: 20px;
+    }
+    footer section>p {
+        display: inline;
+    }
+    footer .btn-menu {
+        display: none;
+    }
+    footer .itens-menu {
+        max-height: fit-content;
+        flex-direction: column;
+        transform: translateY(0%);
+        opacity: 1;
+    }
+    .item-menu:hover {
+        color: gray
+    }
+}

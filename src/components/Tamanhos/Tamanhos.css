@@ -1,0 +1,12 @@
+.tamanhos {
+    display: flex;
+    gap: 10px;
+    justify-content: left;
+    color: white;
+}
+.tamanhos>.tamanho{
+    background-color: var(--rosa);
+    width: 30px;
+    border-radius: 5px;
+    text-align: center;
+}
