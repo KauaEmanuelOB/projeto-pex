@@ -7,11 +7,11 @@ import './Header.css'
 function Header() {
   const [menuAberto, setMenuAberto] = useState(false)
   const [pesquisaAberta, setPesquisaAberta] = useState(false)
-  const menuRef = useRef(null)
+  const navRef = useRef(null)
 
   useEffect(() => {
     const clicarFora = (event) => {
-      if (menuRef.current && !menuRef.current.contains(event.target)) {
+      if (navRef.current && !navRef.current.contains(event.target)) {
         setMenuAberto(false)
       }
     }
@@ -25,8 +25,7 @@ function Header() {
 
           <div className="menu-logo" size={25}>
             <div 
-              className="menu" 
-              ref={menuRef} 
+              className="menu" ref={navRef} 
               onClick={() => setMenuAberto(!menuAberto)}
             >
               <Menu/>
@@ -35,7 +34,7 @@ function Header() {
           </div>
 
           <div className='header-restante'>
-            <Search className='lupa botao-pesquisa' size={30} onClick={() => setPesquisaAberta(!pesquisaAberta)}/>
+            <Search className='lupa botao-pesquisa' size={25} onClick={() => setPesquisaAberta(!pesquisaAberta)}/>
             <div className={`pesquisa pesquisa-desktop`}>
               <input
                 type="text"
@@ -51,8 +50,8 @@ function Header() {
         
         <nav 
           className={menuAberto ? 'menu-aberto' : 'menu-fechado'} 
-          ref={menuRef} 
-          onClick={() => setMenuAberto(!menuAberto)}
+           
+          onClick={() => setMenuAberto(false)}
         >  
           <Link to='/' className='nav-item'><Home size={20}/>Home</Link>
           <Link to='/login' className='nav-item'><User size={20}/>Minha conta</Link>
