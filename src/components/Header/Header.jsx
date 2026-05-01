@@ -24,12 +24,18 @@ function Header() {
         <div>
 
           <div className="menu-logo" size={25}>
-            <Menu ref={menuRef} className='menu' onClick={() => setMenuAberto(!menuAberto)}/>
+            <div 
+              className="menu" 
+              ref={menuRef} 
+              onClick={() => setMenuAberto(!menuAberto)}
+            >
+              <Menu/>
+            </div>
             <Link to='/'><img src={logo} alt="Logo LizeFitwear"/></Link>
           </div>
 
           <div className='header-restante'>
-            <Search className='lupa botao-pesquisa' size={25} onClick={() => setPesquisaAberta(!pesquisaAberta)}/>
+            <Search className='lupa botao-pesquisa' size={30} onClick={() => setPesquisaAberta(!pesquisaAberta)}/>
             <div className={`pesquisa pesquisa-desktop`}>
               <input
                 type="text"
@@ -53,7 +59,7 @@ function Header() {
           <Link to='/produtos' className='nav-item'><Shirt size={20}/>Produtos</Link>
           <Link to='/produtos' className='nav-item'><Tag size={20}/>Novidades</Link>
           <Link to='/produtos' className='nav-item'><BadgePercent size={20}/>OUTLET</Link>
-          <Link to='/guiaMedidas' className='nav-item'><Ruler size={20}/>Guia de Medidas</Link>
+          <Link to='/guia-medidas' className='nav-item'><Ruler size={20}/>Guia de Medidas</Link>
           <Link to='/sobre' className='nav-item'><Info size={20}/>Sobre a Marca</Link>
         </nav>
         {pesquisaAberta && (

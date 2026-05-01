@@ -21,7 +21,7 @@ function Footer() {
             <Link className='item-menu' to='/produtos' >Produtos</Link>
             <Link className='item-menu' to='/produtos' >Novidades</Link>
             <Link className='item-menu' to='/produtos' >OUTLET</Link>
-            <Link className='item-menu' to='/guiaMedidas' >Guia de Medidas</Link>
+            <Link className='item-menu' to='/guia-medidas' >Guia de Medidas</Link>
             <Link className='item-menu' to='/sobre' >Sobre a Marca</Link>
           </div>
         </section>
