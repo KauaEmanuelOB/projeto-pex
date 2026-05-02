@@ -30,7 +30,7 @@ function BlocoProdutos({ titulo, produtos }) {
           className={`carrossel-btn ant ${posicao === 0 ? 'btn-sumir' : ''}`}
           onClick={() => scroll(-1)}
           disabled={posicao <= 0}>
-        <ChevronLeft size={34} />
+        <ChevronLeft size={40} />
         </button>
         <div className='carrossel-corte'>
           <div
@@ -47,7 +47,7 @@ function BlocoProdutos({ titulo, produtos }) {
           className={`carrossel-btn prox ${posicao === posicaoMax ? 'btn-sumir' : ''}`}
           onClick={() => scroll(1)}
           disabled={posicao >= posicaoMax}>
-        <ChevronRight size={34} />
+        <ChevronRight size={40} />
         </button>
       </div>
 

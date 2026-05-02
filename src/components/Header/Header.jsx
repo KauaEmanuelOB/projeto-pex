@@ -22,7 +22,6 @@ function Header() {
   return (
     <header>
         <div>
-
           <div className="menu-logo" size={25}>
             <div 
               className="menu" ref={navRef} 

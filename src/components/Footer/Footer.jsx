@@ -9,9 +9,7 @@ function Footer() {
   const [politicasAberto, setPoliticasAberto] = useState(false)
 
   return (
-    <div>
-      
-      <footer>
+    <footer>
         <section>
           <p className='titulo'>Institucional: </p>
           <div className='btn-menu titulo' onClick={() => setInstituAberto(!instituAberto)}>Institucional <Plus/></div>
@@ -35,11 +33,12 @@ function Footer() {
             <Link className='item-menu' to='' >Perguntas Frequentes</Link>
           </div>
         </section>
+      <div className="fragmentacao">
         <section>
           <div className='titulo'>Canais Oficiais:</div>
-          <div className='canal'><SiWhatsapp/>(47) 99787-3011</div>
-          <div className='canal'><Mail/>lizefitwear@hotmail.com</div>
-          <div className='canal'><SiInstagram/>@lizefitwear</div>
+          <div className='canal'><SiWhatsapp className='whatsapp'/>(47) 99787-3011</div>
+          <div className='canal'><Mail className='email'/>lizefitwear@hotmail.com</div>
+          <div className='canal'><SiInstagram className='instagram'/>@lizefitwear</div>
         </section>
         <section>
           <div>
@@ -62,8 +61,8 @@ function Footer() {
             </div>
           </div>
         </section>
-      </footer>
-    </div>
+      </div>
+    </footer>
   )
 }
 
