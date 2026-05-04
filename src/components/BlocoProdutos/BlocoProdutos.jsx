@@ -13,7 +13,7 @@ function BlocoProdutos({ titulo, produtos }) {
     if (carrossel.current) {
         carrossel.current.style.transform = `translateX(-${posicao}px)`
     }
-}, [posicao])
+  }, [posicao])
 
   const scroll = (direcao) => {
     let novaPosicao = posicao + larguraProduto * direcao
@@ -22,16 +22,10 @@ function BlocoProdutos({ titulo, produtos }) {
   
 
   return (
-    <section className='bloco'>
+    <section className='blocoProd'>
       <h3>{titulo}</h3>
 
       <div className='carrossel'>
-        <button
-          className={`carrossel-btn ant ${posicao === 0 ? 'btn-sumir' : ''}`}
-          onClick={() => scroll(-1)}
-          disabled={posicao <= 0}>
-        <ChevronLeft size={40} />
-        </button>
         <div className='carrossel-corte'>
           <div
           className="bloco-produtos"
@@ -43,6 +37,13 @@ function BlocoProdutos({ titulo, produtos }) {
           </div>
         </div>
         
+        <button
+          className={`carrossel-btn ant ${posicao === 0 ? 'btn-sumir' : ''}`}
+          onClick={() => scroll(-1)}
+          disabled={posicao <= 0}>
+        <ChevronLeft size={40} />
+        </button>
+
         <button
           className={`carrossel-btn prox ${posicao === posicaoMax ? 'btn-sumir' : ''}`}
           onClick={() => scroll(1)}

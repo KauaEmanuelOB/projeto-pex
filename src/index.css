@@ -18,3 +18,8 @@ a, a:hover {
     text-decoration: none;
     color: inherit;
 }
+button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+}

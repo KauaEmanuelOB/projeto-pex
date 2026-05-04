@@ -1,0 +1,7 @@
+export { default as meioPag1 } from './banner1a.webp'
+export { default as meioPag2 } from './banner1a.webp'
+export { default as meioPag3 } from './banner1a.webp'
+export { default as meioPag4 } from './banner1a.webp'
+export { default as meioPag5 } from './banner1a.webp'
+export { default as meioPag6 } from './banner1a.webp'
+export { default as meioPag7 } from './banner1a.webp'

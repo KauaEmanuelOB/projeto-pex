@@ -1,4 +1,4 @@
-.bloco {
+.blocoProd {
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -6,40 +6,38 @@
     width: 100%;
     margin: auto;
 }
-.bloco>h3 {
+.blocoProd>h3 {
     color: black;
 }
-.bloco-produtos {
+.blocoProd .bloco-produtos {
     gap: 5px;
     display: flex;
     padding: 10px 0px;
     transition: transform 0.3s ease;
 }   
-.carrossel-corte {
+.blocoProd .carrossel-corte {
     overflow-x: auto;  
 }
-.carrossel-btn {
+.blocoProd .carrossel-btn {
     display: none;
 }
 
 @media (min-width: 1060px) {
-    .bloco {
-        width: 995px;
+    .blocoProd {
+        width: 990px;
     }
-    .carrossel {
+    .blocoProd .carrossel {
         position: relative;
     }
-    .bloco-produtos {
+    .blocoProd .bloco-produtos {
         gap: 10px;
         width: 100%;
         padding: 10px 0px 10px 20px;;
     }
-    .carrossel-corte {
+    .blocoProd .carrossel-corte {
         overflow: hidden;
     }
-    .carrossel-btn {
-        background-color: inherit;
-        border: none;
+    .blocoProd .carrossel-btn {
         width: 40px;
         height: 40px;
 
@@ -50,21 +48,19 @@
         display: flex;
         align-items: center;
         justify-content: center;
-
-        cursor: pointer;
     }
-    .btn-sumir {
+    .blocoProd .btn-sumir {
         display: none;
     }
-    .prox {
+    .blocoProd .prox {
         right: -40px;
     }
-    .ant {
+    .blocoProd .ant {
         left: -40px;
     }
 }
 @media (min-width: 1300px) {
-    .bloco {
+    .blocoProd {
         width: 1230px;
     }
 }
