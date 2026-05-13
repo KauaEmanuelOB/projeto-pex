@@ -1,8 +1,14 @@
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
 header>div {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0px 30px;
+    background-color: white;
 }
 header .menu-logo {
     display: flex;
@@ -25,29 +31,24 @@ header .pesquisa {
     align-items: center;
     padding: 15px;
     border-radius: 15px;
-    width: calc(300px + 20vw);
+    width: calc(300px + 20vw); 
     justify-content: space-between;
 }
 header .pesquisa-desktop {
     display: none;
 }
 header .pesquisa-mobile {
-    width: 95%;
-    margin: auto;
-    
+    width: 100%;
+    border-radius: 0px;
+    display: flex;
     transform: translateY(-100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
-    max-height: 0px;
-    opacity: 0;
-    position: relative;
+    transition: transform 0.3s ease;
+    position: absolute;
     pointer-events: none
 }
 header .pesquisa-aberta {
-    display: flex;
     transform: translateY(0%);
-    opacity: 1;
     pointer-events: all;
-    max-height: 100px;
 }
 header input {
     border: none;
@@ -62,30 +63,35 @@ header .lupa {
 
 header nav {
     transform: translateY(-100%);
-    transition: transform 0.3s ease, opacity 0.3s ease;
+    transition: transform 0.3s ease;
 
     flex-direction: column;
     background-color: rgb(240,240,240);
     width: 100%;
-    opacity: 0;
 
     max-height: 0px;
     display: flex;
-    position: relative;
-    pointer-events: none
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
 }
 
-header .menu-aberto {
+header nav.menu-aberto {
     transform: translateY(0%);
-    opacity: 1;
     pointer-events: all;
     max-height: fit-content;
 }
 header .nav-item {
+    transform: translateY(-700%);
+    transition: transform 0.3s ease;
     padding: 10px 20px;
     display: flex;
     align-items: center;
     justify-content: left;
+    background-color: rgb(240,240,240);
+}
+header nav.menu-aberto .nav-item {
+    transform: translateY(0%);
 }
 
 
@@ -100,25 +106,30 @@ header .nav-item {
         display: flex;
         border: 2px black solid;
     }
-    header .pesquisa-mobile, .botao-pesquisa {
+    header .pesquisa-mobile, header .botao-pesquisa {
         display: none;
     }
 
-
     header nav {
-        flex-direction: row;
         display: flex;
+        flex-direction: row;
         justify-content: center;
+        position: relative;
         transform: translateY(0%);
         opacity: 1;
         max-height: fit-content;
         pointer-events: all;
+    }
+    header.sticky-on nav {
+        transform: translateY(-100%);
+        position: absolute;
     }
     header .menu {
         display: none;
     }
     header .nav-item {
         width: fit-content;
+        transform: translateY(0%);
     }
     header .nav-item:hover{
         transform: scale(1.1);

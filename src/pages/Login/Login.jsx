@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import LoginForm from '../components/Login/LoginForm'
+import LoginForm from '../../components/Login/LoginForm'
 
 function Login() {
   useEffect(() => {

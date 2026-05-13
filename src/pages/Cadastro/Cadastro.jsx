@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import CadastroForm from '../components/Cadastro/CadastroForm'
+import CadastroForm from '../../components/Cadastro/CadastroForm'
 
 function Cadastro() {
   useEffect(() => {

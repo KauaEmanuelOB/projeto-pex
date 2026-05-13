@@ -1,4 +1,5 @@
 import { useEffect } from 'react'
+import PageHeader from '../../components/PageHeader/PageHeader.jsx'
 
 function GuiaMedidas() {
   useEffect(() => {
@@ -7,7 +8,7 @@ function GuiaMedidas() {
 
   return (
     <main>
-        
+      <PageHeader titulo="Guia de medidas"/>
     </main>
   )
 }

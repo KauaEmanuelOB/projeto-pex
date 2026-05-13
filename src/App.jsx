@@ -3,12 +3,13 @@ import { useEffect } from 'react'
 import './App.css'
 import Header from './components/Header/Header.jsx'
 import Footer from './components/Footer/Footer.jsx'
-import Home from './pages/Home.jsx'
-import Produtos from './pages/Produtos.jsx'
-import Login from './pages/Login.jsx'
-import Cadastro from './pages/Cadastro.jsx'
-import GuiaMedidas from './pages/GuiaMedidas.jsx'
-import Carrinho from './pages/Carrinho.jsx'
+import Home from './pages/Home/Home.jsx'
+import Produtos from './pages/Produtos/Produtos.jsx'
+import Login from './pages/Login/Login.jsx'
+import Cadastro from './pages/Cadastro/Cadastro.jsx'
+import GuiaMedidas from './pages/GuiaMedidas/GuiaMedidas.jsx'
+import Carrinho from './pages/Carrinho/Carrinho.jsx'
+import Sobre from './pages/Sobre/Sobre.jsx'
 
 function App() {
   useEffect(() => {
@@ -25,6 +26,7 @@ function App() {
         <Route path='/cadastro' element={<Cadastro/>}></Route>
         <Route path='/guia-medidas' element={<GuiaMedidas/>}></Route>
         <Route path='/login' element={<Login/>}></Route>
+        <Route path='/sobre' element={<Sobre/>}></Route>
         <Route path='/carrinho' element={<Carrinho/>}></Route>
 
         <Route path="*" element={<h1>Página não encontrada! :(</h1>} />

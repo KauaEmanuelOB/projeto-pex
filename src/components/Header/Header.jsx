@@ -8,6 +8,7 @@ function Header() {
   const [menuAberto, setMenuAberto] = useState(false)
   const [pesquisaAberta, setPesquisaAberta] = useState(false)
   const navRef = useRef(null)
+  const [sticky, setSticky] = useState(false)
 
   useEffect(() => {
     const clicarFora = (event) => {
@@ -18,9 +19,20 @@ function Header() {
     document.addEventListener('click', clicarFora)
     return () => document.removeEventListener('click', clicarFora)
   }, [])
-
+  
+  const handleScroll = () => {
+    if (window.scrollY > 1)
+      setSticky(true)
+    else
+      setSticky(false)
+  }
+  useEffect(() => {
+  window.addEventListener('scroll', handleScroll)
+  return () => window.removeEventListener('scroll', handleScroll)
+}, [])
+  
   return (
-    <header>
+    <header className={sticky ? 'sticky-on' : ''}>
         <div>
           <div className="menu-logo" size={25}>
             <div 

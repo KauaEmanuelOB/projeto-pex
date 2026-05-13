@@ -1,0 +1,36 @@
+.page-produtos  {
+
+  .page-produtos-div {
+    display: flex;
+    flex-direction: column;
+    margin: 20px;
+    gap: 20px;
+  }
+  .opcoes-produtos {
+    background-color: white;
+    border: black solid 2px;
+    height: 500px;
+  }
+  .grid-produtos {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+  }
+
+}
+
+@media (min-width: 1000px) {
+  .page-produtos {
+
+    .page-produtos-div {
+      flex-direction: row;
+    }
+    .opcoes-produtos {
+      width: 25%;
+    }
+    .grid-produtos {
+      width: 75%;
+    }
+
+  }
+}
