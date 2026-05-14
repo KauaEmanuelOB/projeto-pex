@@ -48,11 +48,11 @@ function CadastroForm() {
       <div className="login-box">
 
         <p className="login-breadcrumb">
-          Início &gt; Minha conta &gt; Login
+          Início &gt; Minha conta &gt; Cadastro
         </p>
 
         <h1 className="login-title">
-          Iniciar sessão
+          Cadastre-se
         </h1>
 
         <div className="input-group">

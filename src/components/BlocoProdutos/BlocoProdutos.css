@@ -6,25 +6,32 @@
     width: 100%;
     margin: auto;
 }
-.blocoProd>h3 {
-    color: black;
-}
-.blocoProd .bloco-produtos {
-    gap: 5px;
-    display: flex;
-    padding: 10px 0px;
-    transition: transform 0.3s ease;
-}   
-.blocoProd .carrossel-corte {
-    overflow-x: auto;  
-}
-.blocoProd .carrossel-btn {
-    display: none;
-}
 
-@media (min-width: 1060px) {
+.blocoProd {
+
+    >h3 {
+        color: black;
+    }
+    .bloco-produtos {
+        gap: 10px;
+        display: flex;
+        padding: 10px 0px;
+        transition: transform 0.3s ease;
+        align-items: center;
+    }   
+    .carrossel-corte {
+        overflow-x: auto;  
+    }
+    .carrossel-btn {
+        display: none;
+    }
+    a {
+        text-decoration: underline;
+    }
+}
+@media (min-width: 1200px) {
     .blocoProd {
-        width: 990px;
+        width: 1110px;
     }
     .blocoProd .carrossel {
         position: relative;
@@ -32,7 +39,7 @@
     .blocoProd .bloco-produtos {
         gap: 10px;
         width: 100%;
-        padding: 10px 0px 10px 20px;;
+        padding: 30px 20px;
     }
     .blocoProd .carrossel-corte {
         overflow: hidden;
@@ -59,8 +66,8 @@
         left: -40px;
     }
 }
-@media (min-width: 1300px) {
+@media (min-width: 1430px) {
     .blocoProd {
-        width: 1230px;
+        width: 1380px;
     }
 }

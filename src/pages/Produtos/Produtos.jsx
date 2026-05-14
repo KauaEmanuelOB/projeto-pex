@@ -6,7 +6,7 @@ import './Produtos.css'
 
 function Produtos() {
   useEffect(() => {
-    document.title = "Produtos"
+    document.title = "Todos os produtos | Lize Fitwear"
   },[])
 
   return (

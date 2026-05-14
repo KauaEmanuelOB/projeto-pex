@@ -3,7 +3,7 @@ import PageHeader from '../../components/PageHeader/PageHeader'
 
 function Sobre() {
   useEffect(() => {
-    document.title = "Sobre"
+    document.title = "Sobre a Marca | Lize Fitwear"
   },[])
 
   return (

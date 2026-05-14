@@ -21,7 +21,7 @@ function Header() {
   }, [])
   
   const handleScroll = () => {
-    if (window.scrollY > 1)
+    if (window.scrollY > 40)
       setSticky(true)
     else
       setSticky(false)
@@ -33,17 +33,16 @@ function Header() {
   
   return (
     <header className={sticky ? 'sticky-on' : ''}>
-        <div>
+        <div className='header-sec'>
           <div className="menu-logo" size={25}>
-            <div 
-              className="menu" ref={navRef} 
+            <div
+              className="menu" ref={navRef}
               onClick={() => setMenuAberto(!menuAberto)}
             >
               <Menu/>
             </div>
             <Link to='/'><img src={logo} alt="Logo LizeFitwear"/></Link>
           </div>
-
           <div className='header-restante'>
             <Search className='lupa botao-pesquisa' size={25} onClick={() => setPesquisaAberta(!pesquisaAberta)}/>
             <div className={`pesquisa pesquisa-desktop`}>
@@ -58,12 +57,12 @@ function Header() {
             <Link to='/' ><ShoppingCart size={30}/></Link>
           </div>
         </div>
-        
-        <nav 
-          className={menuAberto ? 'menu-aberto' : 'menu-fechado'} 
-           
+    
+        <nav
+          className={menuAberto ? 'menu-aberto' : 'menu-fechado'}
+    
           onClick={() => setMenuAberto(false)}
-        >  
+        >
           <Link to='/' className='nav-item'><Home size={20}/>Home</Link>
           <Link to='/login' className='nav-item'><User size={20}/>Minha conta</Link>
           <Link to='/produtos' className='nav-item'><Shirt size={20}/>Produtos</Link>
@@ -72,6 +71,7 @@ function Header() {
           <Link to='/guia-medidas' className='nav-item'><Ruler size={20}/>Guia de Medidas</Link>
           <Link to='/sobre' className='nav-item'><Info size={20}/>Sobre a Marca</Link>
         </nav>
+        
         {pesquisaAberta && (
         <div onBlur={() => setPesquisaAberta(false)} className={`pesquisa pesquisa-mobile ${pesquisaAberta ? 'pesquisa-aberta' : ''}`}>
           <input

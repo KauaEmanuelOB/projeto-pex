@@ -3,7 +3,7 @@ import PageHeader from '../../components/PageHeader/PageHeader.jsx'
 
 function GuiaMedidas() {
   useEffect(() => {
-    document.title = "Guia de Medidas"
+    document.title = "Guia de Medidas | Lize Fitwear"
   },[])
 
   return (

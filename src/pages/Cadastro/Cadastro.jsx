@@ -3,7 +3,7 @@ import CadastroForm from '../../components/Cadastro/CadastroForm'
 
 function Cadastro() {
   useEffect(() => {
-    document.title = "Cadastro"
+    document.title = "Cadastro | Lize Fitwear"
   }, [])
 
   return (

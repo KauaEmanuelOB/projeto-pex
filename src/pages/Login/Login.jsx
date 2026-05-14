@@ -3,7 +3,7 @@ import LoginForm from '../../components/Login/LoginForm'
 
 function Login() {
   useEffect(() => {
-    document.title = "Login"
+    document.title = "Login | Lize Fitwear"
   }, [])
 
   return (

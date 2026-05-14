@@ -3,18 +3,19 @@
   .page-produtos-div {
     display: flex;
     flex-direction: column;
-    margin: 20px;
     gap: 20px;
   }
   .opcoes-produtos {
     background-color: white;
     border: black solid 2px;
-    height: 500px;
+    height: 100px;
   }
   .grid-produtos {
+    padding: 5px;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-    gap: 20px;
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+    gap: 10px;
   }
 
 }
@@ -24,12 +25,19 @@
 
     .page-produtos-div {
       flex-direction: row;
+      width: 90%;
+      margin: auto;
     }
     .opcoes-produtos {
-      width: 25%;
+      width: 20%;
+      height: 500px;
+
+      position: sticky;
+      top: 12.5vh
     }
     .grid-produtos {
-      width: 75%;
+      width: 80%;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     }
 
   }

@@ -7,7 +7,7 @@ import Produto from '../Produto/Produto.jsx'
 function BlocoProdutos({ titulo, produtos }) {
   const [posicao,setPosicao] = useState(0)
   const carrossel = useRef(null)
-  const larguraProduto = 240
+  const larguraProduto = 270
   const posicaoMax = (produtos.length - 5) * larguraProduto
   useEffect(() => {
     if (carrossel.current) {
