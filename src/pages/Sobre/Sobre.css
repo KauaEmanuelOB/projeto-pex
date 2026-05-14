@@ -1,0 +1,171 @@
+
+.sobre {
+    width: 100%;
+    background: #f0efef;
+    color: #1d1d1d;
+  }
+  
+  .sobre__hero {
+    width: 100%;
+    height: 340px;
+  
+    background-color: rgb(75, 75, 75);
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    text-align: center;
+  }
+  
+  .sobre__overlay {
+    padding: 20px;
+  }
+  
+  .sobre__overlay h1 {
+    color: #fff;
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+  }
+  
+  .sobre__overlay p {
+    color: #e8e8e8;
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  
+  .sobre__intro {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 60px 20px 40px;
+  
+    text-align: center;
+  }
+  
+  .sobre__intro p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+    color: #2b2b2b;
+  }
+
+  
+  .sobre__beneficios {
+    background: #d8d0d0;
+    padding: 55px 20px 70px;
+  }
+  
+  .sobre__beneficios h2,
+  .sobre__qualidades h2 {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 800;
+    margin-bottom: 45px;
+    color: #111;
+  }
+  
+  .sobre__cards {
+    max-width: 1150px;
+    margin: 0 auto;
+  
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  
+  .sobre__card {
+    background: #ffffff;
+    border-radius: 18px;
+  
+    min-height: 110px;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    text-align: center;
+  
+    padding: 20px;
+  
+    font-size: 1rem;
+    font-weight: 500;
+  
+    color: #444;
+  
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  }
+  
+  .sobre__qualidades {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 20px 90px;
+  }
+  
+  .sobre__qualidades ul {
+    list-style: none;
+    padding: 0;
+  
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+  }
+  
+  .sobre__qualidades li {
+    font-size: 1.2rem;
+    color: #222;
+  
+    display: flex;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .sobre__qualidades li::before {
+    content: '✔';
+    font-weight: bold;
+    color: #111;
+  }
+  
+  @media (max-width: 900px) {
+    .sobre__cards {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    .sobre__overlay h1 {
+      font-size: 2.3rem;
+    }
+  
+    .sobre__beneficios h2,
+    .sobre__qualidades h2 {
+      font-size: 1.6rem;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .sobre__hero {
+      height: 260px;
+    }
+  
+    .sobre__overlay h1 {
+      font-size: 2rem;
+    }
+  
+    .sobre__overlay p {
+      font-size: 1rem;
+    }
+  
+    .sobre__intro p {
+      font-size: 1rem;
+    }
+  
+    .sobre__cards {
+      grid-template-columns: 1fr;
+    }
+  
+    .sobre__card {
+      min-height: 90px;
+    }
+  
+    .sobre__qualidades li {
+      font-size: 1rem;
+    }
+  }
