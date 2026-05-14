@@ -104,9 +104,6 @@ footer {
 }
 
 @media (min-width: 950px) {
-    footer {
-        font-size: 1.1em;
-    }
     footer .grid-footer {
         grid-template-columns: 1fr 1fr;
     }
@@ -129,7 +126,7 @@ footer {
 
 @media (min-width: 1150px) {
     footer {
-        font-size: 1.2em;
+        font-size: 1.05em;
     }
     footer .grid-footer {
         grid-template-columns: repeat(4, 1fr);
