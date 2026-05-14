@@ -2,6 +2,8 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom'
 import { Plus, Minus, Mail, } from 'lucide-react'
 import { SiInstagram, SiWhatsapp } from '@icons-pack/react-simple-icons'
+import { meioPag1, meioPag2, meioPag3, meioPag4, meioPag5, meioPag6, meioPag7, meioPag8 } from '../../assets/meiosPagamento'
+import { meioEnvio1, meioEnvio2 } from '../../assets/meiosEnvio'
 import './Footer.css'
 
 function Footer() {
@@ -21,7 +23,7 @@ function Footer() {
             >
               Institucional 
               <Plus className='abrir'/><Minus className='fechar'/></div>
-            <div className={`itens-menu ${instituAberto ? 'menu-aberto' : ''}`}>
+            <div className={`itens-menu ${instituAberto ? 'institu-aberto' : ''}`}>
               <Link className='item-menu' to='/' >Home</Link>
               <Link className='item-menu' to='/login' >Minha conta</Link>
               <Link className='item-menu' to='/produtos' >Produtos</Link>
@@ -40,7 +42,7 @@ function Footer() {
             >
               Políticas da Empresa 
               <Plus className='abrir'/><Minus className='fechar'/></div>
-            <div className={`itens-menu ${politicasAberto ? 'menu-aberto' : ''}`}>
+            <div className={`itens-menu ${politicasAberto ? 'polit-aberto' : ''}`}>
               <Link className='item-menu' to='' >Política de Privacidade</Link>
               <Link className='item-menu' to='' >Troca e Devoluções</Link>
               <Link className='item-menu' to='' >A Lize é confiável?</Link>
@@ -59,20 +61,21 @@ function Footer() {
             <div>
               <div className='titulo'>Formas de pagamento:</div>
               <div className='itens-formas'>
-                <div/>
-                <div/>
-                <div/>
-                <div/>
-                <div/>
-                <div/>
-                <div/>
+                <img src={meioPag1} alt="" />
+                <img src={meioPag2} alt="" />
+                <img src={meioPag3} alt="" />
+                <img src={meioPag4} alt="" />
+                <img src={meioPag5} alt="" />
+                <img src={meioPag6} alt="" />
+                <img src={meioPag7} alt="" />
+                <img src={meioPag8} alt="" />
               </div>
             </div>
             <div>
               <div className='titulo'>Formas de Envio:</div>
               <div className='itens-formas'>
-                <div/>
-                <div/>
+                <img src={meioEnvio1} alt="" />
+                <img src={meioEnvio2} alt="" />
               </div>
             </div>
           </section>

@@ -32,7 +32,9 @@ function BlocoProdutos({ titulo, produtos }) {
           ref={carrossel}
           >
             {produtos.map((produto) => (
-              <Produto key={produto.id} produto={produto} />
+              <div className="item-bloco">
+                <Produto key={produto.id} produto={produto}/>
+              </div>
             ))}
           </div>
         </div>

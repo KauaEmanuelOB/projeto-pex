@@ -5,8 +5,8 @@
 
 footer {
     margin-top: 20px;
-    border-top: rgb(192, 192, 192) solid 2px;
-    padding: 30px 30px;
+    border-top: 1px solid rgba(0, 0, 0, 0.205);
+    padding: 15px 15px;
     background-color: var(--cor-fundo);
     font-size: 1.0em;
     color: var(--cor-fonte);
@@ -35,6 +35,7 @@ footer {
     .btn-menu {
         display: flex;
         align-items: center;
+        height: 40px;
         width: 100%;
         justify-content: space-between;
         cursor: pointer;
@@ -52,14 +53,15 @@ footer {
         
         max-height: 0px;
         position: relative;
-        transform: translateY(-100%);
+        max-height: 0px;
         overflow: hidden;
-        transition: transform 0.6s ease, max-height 0.6s ease;
+        transition: max-height 0.4s ease;
     }
-    .menu-aberto {
-        max-height: fit-content;
-        flex-direction: column;
-        transform: translateY(0%);
+    .institu-aberto {
+        max-height: 250px;
+    }
+    .polit-aberto {
+        max-height: 130px;
     }
     .btn-aberto .fechar {
         display: inline-block;
@@ -72,22 +74,23 @@ footer {
         align-items: center;
         gap: 7px;
         padding-bottom: 10px;
-        border-bottom: rgb(158, 158, 158) solid 2px;
+        border-bottom: 2px solid rgba(0, 0, 0, 0.205);
     }
 
     .itens-formas {
         display: flex;
         gap: 15px;
+        flex-wrap: wrap;
     }
-    .itens-formas>div {
-        display: inline;
-        background-color: gray;
-        height: 25px;
-        width: 40px;
+    .itens-formas>img {
+        height: 30px;
+        max-width: 100%;
     }
+    
     section>p {
         display: none;
     }
+
     .whatsapp {
         color: var(--cor-fonte);
     }
@@ -100,7 +103,10 @@ footer {
 
 }
 
-@media (min-width: 700px) {
+@media (min-width: 950px) {
+    footer {
+        font-size: 1.1em;
+    }
     footer .grid-footer {
         grid-template-columns: 1fr 1fr;
     }
@@ -121,7 +127,10 @@ footer {
     }
 }
 
-@media (min-width: 1100px) {
+@media (min-width: 1150px) {
+    footer {
+        font-size: 1.2em;
+    }
     footer .grid-footer {
         grid-template-columns: repeat(4, 1fr);
         padding: 0px 70px;

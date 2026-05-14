@@ -21,7 +21,7 @@ function Header() {
   }, [])
   
   const handleScroll = () => {
-    if (window.scrollY > 40)
+    if (window.scrollY > 25)
       setSticky(true)
     else
       setSticky(false)

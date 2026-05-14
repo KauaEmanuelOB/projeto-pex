@@ -13,61 +13,89 @@
         color: black;
     }
     .bloco-produtos {
-        gap: 10px;
+        gap: 5px;
         display: flex;
-        padding: 10px 0px;
+        padding: 10px 5px;
         transition: transform 0.3s ease;
         align-items: center;
-    }   
+    }
+    .item-bloco {
+        min-width: 200px;
+        width: 200px;
+    } 
     .carrossel-corte {
         overflow-x: auto;  
     }
     .carrossel-btn {
         display: none;
     }
-    a {
-        text-decoration: underline;
+}
+@media (min-width: 930px) {
+    .blocoProd {
+        width: 840px;
+    }
+    .blocoProd {
+
+        >h3 {
+            color: black;
+        }
+        .carrossel {
+            position: relative;
+        }
+        .bloco-produtos {
+            display: flex;
+            gap: 10px;
+            width: 100%;
+            padding: 25px 20px;
+            transition: transform 0.4s ease;
+        }
+        .item-bloco {
+            min-width: 260px;
+            width: 260px;
+        } 
+        .carrossel-corte {
+            overflow: hidden;
+        }
+        .carrossel-btn {
+            width: 40px;
+            height: 40px;
+
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .btn-sumir {
+            display: none;
+        }
+        .prox {
+            right: -40px;
+        }
+        .ant {
+            left: -40px;
+        }
     }
 }
 @media (min-width: 1200px) {
     .blocoProd {
         width: 1110px;
     }
-    .blocoProd .carrossel {
-        position: relative;
-    }
-    .blocoProd .bloco-produtos {
-        gap: 10px;
-        width: 100%;
-        padding: 30px 20px;
-    }
-    .blocoProd .carrossel-corte {
-        overflow: hidden;
-    }
-    .blocoProd .carrossel-btn {
-        width: 40px;
-        height: 40px;
-
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    .blocoProd .btn-sumir {
-        display: none;
-    }
-    .blocoProd .prox {
-        right: -40px;
-    }
-    .blocoProd .ant {
-        left: -40px;
-    }
 }
-@media (min-width: 1430px) {
+@media (min-width: 1450px) {
     .blocoProd {
         width: 1380px;
     }
+}
+@media (min-width: 2200px) {
+    .blocoProd {
+        width: 1800px;
+    }
+    .item-bloco {
+        min-width: 400px;
+        width: 400px;
+        border-radius: 20px;
+    } 
 }
