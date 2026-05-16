@@ -16,21 +16,37 @@
     .bloco-produtos {
         gap: 5px;
         display: flex;
-        padding: 10px 5px;
+        padding: 10px 0px;
         transition: transform 0.3s ease;
         align-items: center;
     }
     .item-bloco {
-        min-width: 200px;
-        width: 200px;
+        flex: 0 0 calc(50% - 2.5px);
+        min-width: 0px;
+        box-sizing: border-box;
+        scroll-snap-align: start;
+        height: 100%;
     } 
     .carrossel-corte {
-        overflow-x: auto;  
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+    }
+    .carrossel-corte::-webkit-scrollbar {
+        display: none;
     }
     .carrossel-btn {
         display: none;
     }
 }
+@media (min-width: 670px) {
+    .blocoProd .item-bloco {
+        flex: 0 0 calc(33% - 2.5px);
+    } 
+}
+
 @media (min-width: 930px) {
     .blocoProd {
         width: 840px;
@@ -51,8 +67,7 @@
             transition: transform 0.4s ease;
         }
         .item-bloco {
-            min-width: 260px;
-            width: 260px;
+            flex: 0 0 260px;
         } 
         .carrossel-corte {
             overflow: hidden;
@@ -89,14 +104,4 @@
     .blocoProd {
         width: 1380px;
     }
-}
-@media (min-width: 2200px) {
-    .blocoProd {
-        width: 1800px;
-    }
-    .item-bloco {
-        min-width: 400px;
-        width: 400px;
-        border-radius: 20px;
-    } 
 }

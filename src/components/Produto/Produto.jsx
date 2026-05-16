@@ -1,5 +1,4 @@
 import Tamanhos from '../Tamanhos/Tamanhos'
-import { Plus } from 'lucide-react'
 import './Produto.css'
 
 function Produto({produto}) {
@@ -21,7 +20,7 @@ function Produto({produto}) {
 
             <p className="precoParcelado">6x {formatarMoeda(parcela(produto.preco,6))} sem juros</p>
 
-            <button>Carrinho<Plus/></button>
+            <button>Ver detalhes</button>
 
         </section>
     </article>

@@ -27,9 +27,9 @@ function Header() {
       setSticky(false)
   }
   useEffect(() => {
-  window.addEventListener('scroll', handleScroll)
-  return () => window.removeEventListener('scroll', handleScroll)
-}, [])
+    window.addEventListener('scroll', handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
   
   return (
     <header className={sticky ? 'sticky-on' : ''}>
@@ -53,8 +53,8 @@ function Header() {
               />
               <Search className='lupa' size={30}/>
             </div>
-            <Link to='/login'><CircleUser size={30}/></Link>
-            <Link to='/' ><ShoppingCart size={30}/></Link>
+            <Link to='/login'><CircleUser size={25}/></Link>
+            <Link to='/' ><ShoppingCart size={25}/></Link>
           </div>
         </div>
     
@@ -65,9 +65,9 @@ function Header() {
         >
           <Link to='/' className='nav-item'><Home size={20}/>Home</Link>
           <Link to='/login' className='nav-item'><User size={20}/>Minha conta</Link>
-          <Link to='/produtos' className='nav-item'><Shirt size={20}/>Produtos</Link>
-          <Link to='/produtos' className='nav-item'><Tag size={20}/>Novidades</Link>
-          <Link to='/produtos' className='nav-item'><BadgePercent size={20}/>OUTLET</Link>
+          <Link to='/produtos?ord=1' className='nav-item'><Shirt size={20}/>Produtos</Link>
+          <Link to='/produtos?ord=1' className='nav-item'><Tag size={20}/>Novidades</Link>
+          <Link to='/produtos?ord=2' className='nav-item'><BadgePercent size={20}/>OUTLET</Link>
           <Link to='/guia-medidas' className='nav-item'><Ruler size={20}/>Guia de Medidas</Link>
           <Link to='/sobre' className='nav-item'><Info size={20}/>Sobre a Marca</Link>
         </nav>

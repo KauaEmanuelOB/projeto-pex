@@ -6,28 +6,120 @@
     gap: 20px;
     max-width: 100%;
   }
+
   .opcoes-produtos {
     background-color: white;
-    border: 1px solid rgba(0, 0, 0, 0.205);
-    height: 100px;
+    height: fit-content;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-size: 1.0em;
+    padding: 10px;
   }
 
+  .opcoes-produtos {
+    
+    .btn-menu {
+      padding: 5px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      font-weight: bold;
+    }
+
+    .filtros {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 100%;
+      gap: 20px;  
+      max-height: 0px;  
+      overflow: hidden;
+      transition: max-height 0.5s ease;
+    }
+
+    .filtro-aberto {
+      max-height: 500px;
+    }
+    
+    .fechar, .filtro-aberto .abrir {
+      display: none;
+    }
+
+    .filtro-aberto .fechar, .abrir {
+      display: flex;
+    }
+
+    input {
+      display: flex;
+      border: black solid 1px;
+      padding: 10px;
+      border-radius: 5px;
+      width: 100%;
+      font-size: 1.0em;
+    }
+
+    select {
+      width: 100%;
+      padding: 10px;
+    }
+
+    button {
+      width: 100%;
+      height: 50px;
+      background-color: var(--rosa);
+      color: white;
+      border: none;
+      border-radius: 5px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    
+    .button:hover {
+      background-color: rgb(87, 126, 55);
+    }
+
+  }
+  
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
+  .page-produtos {
+
+    .page-produtos-div {
+      flex-direction: row;
+      width: 100%;
+      margin: auto;
+    }
+    .opcoes-produtos {
+      width: 20%;
+
+      position: sticky;
+      top: 12vh;
+    }
+    .filtros {
+      max-height: 500px !important;
+    }
+    .abrir {
+      display: none !important;
+    }
+    .fechar {
+      display: none !important;
+    }
+  }
+}
+@media (min-width: 1200px) {
   .page-produtos {
 
     .page-produtos-div {
       flex-direction: row;
       width: 90%;
       margin: auto;
-    }
-    .opcoes-produtos {
-      width: 20%;
-      height: 500px;
-
-      position: sticky;
-      top: 12vh
     }
   }
 }

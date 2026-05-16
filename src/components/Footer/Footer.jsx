@@ -26,9 +26,9 @@ function Footer() {
             <div className={`itens-menu ${instituAberto ? 'institu-aberto' : ''}`}>
               <Link className='item-menu' to='/' >Home</Link>
               <Link className='item-menu' to='/login' >Minha conta</Link>
-              <Link className='item-menu' to='/produtos' >Produtos</Link>
-              <Link className='item-menu' to='/produtos' >Novidades</Link>
-              <Link className='item-menu' to='/produtos' >OUTLET</Link>
+              <Link className='item-menu' to='/produtos?ord=1' >Produtos</Link>
+              <Link className='item-menu' to='/produtos?ord=1' >Novidades</Link>
+              <Link className='item-menu' to='/produtos?ord=2' >OUTLET</Link>
               <Link className='item-menu' to='/guia-medidas' >Guia de Medidas</Link>
               <Link className='item-menu' to='/sobre' >Sobre a Marca</Link>
             </div>

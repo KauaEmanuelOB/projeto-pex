@@ -9,7 +9,7 @@
     width: 100%;
     height: 340px;
   
-    background-color: rgb(75, 75, 75);
+    background-color: var(--rosa);
   
     display: flex;
     align-items: center;

@@ -2,60 +2,95 @@
     width: 100%;
     position: relative;
 }
+
 .banner .carrossel-corte {
     overflow: hidden;
     width: 100%;
+
 }
+
 .banner .carrossel {
     display: flex;
     flex-direction: row;
     width: 100%;
     transition: transform 0.4s ease;
 }
+
 .banner img {
-    width: 100%;
+    width: 100vw;
     flex-shrink: 0;
 }
-.banner button {
-    border-radius: 100%;
-    background-color: rgba(255, 255, 255, 0.3);
 
+.banner button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 40px;
+    height: 100%;
+    z-index: 20;
+    cursor: pointer;
 }
+
 .banner .anterior {
-    left: 1%;
+    left: 0px;
 }
 
 .banner .prox {
-    right: 1%;
+    right: 0px;
 }
+
 .banner .indicadores {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-
+    gap: 5px;
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
     top: 93%;
+    z-index: 5;
 }
-.banner .indicadores>span {
-    width: 12px;
-    height: 12px;
-    border: rgb(35, 150, 12) solid 2px;
+
+.banner .indicadores > span {
+    width: 8px;
+    height: 8px;
+    border: rgb(35, 150, 12) solid 1px;
     border-radius: 100%;
-    transition: background-color 0.4s ease, width 0.4s ease;
+    transition: width 0.4s ease, border-radius 0.4s ease;
 }
+
 .banner .indicadores .ativa {
-    width: 30px;
-    border-radius: 35%;
+    width: 20px;
+    border-radius: 40%;
     background-color: rgb(35, 150, 12);
+}
+
+@media (min-width: 900px) {  
+    .banner button {
+        top: 50%;
+        transform: translateY(-50%);
+        width: 70px;
+        z-index: 20;
+        cursor: pointer;
+    }
+    
+    .banner .indicadores {
+        gap: 10px;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 93%;
+        z-index: 5;
+    }
+
+    .banner .indicadores > span {
+        width: 10px;
+        height: 10px;
+    }
+
+    .banner .indicadores .ativa {
+        width: 30px;
+        border-radius: 40%;
+        background-color: rgb(35, 150, 12);
+    }
 }

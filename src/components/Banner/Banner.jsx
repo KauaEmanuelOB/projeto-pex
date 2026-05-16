@@ -4,10 +4,11 @@ import './Banner.css'
 
 function Banner({ imagens }) {
   const larguraBanner = imagens.length
-  const [posicao,setPosicao] = useState(0)
+  const [posicao, setPosicao] = useState(0)
   const carrossel = useRef(null)
 
   useEffect(() => {
+
     if (carrossel.current) {
         carrossel.current.style.transform = `translateX(-${posicao * 100}%)`
     }
@@ -15,8 +16,12 @@ function Banner({ imagens }) {
 
   const scroll = (direcao) => {
     let novaPosicao = posicao + direcao
-    if (novaPosicao < 0) novaPosicao = larguraBanner - 1
-    if (novaPosicao >= larguraBanner) novaPosicao = 0
+    if (novaPosicao < 0) {
+      novaPosicao = larguraBanner - 1
+    }
+    if (novaPosicao >= larguraBanner) {
+      novaPosicao = 0
+    }
     setPosicao(novaPosicao)
   }
 
@@ -24,7 +29,7 @@ function Banner({ imagens }) {
     const interval = setInterval(() => {
       setPosicao((prev) => {
         let nova = prev + 1
-        if (nova >= imagens.length) nova = 0
+        if (nova >= larguraBanner) nova = 0
         return nova
       })
     }, 6000)
@@ -60,14 +65,14 @@ function Banner({ imagens }) {
         className={'anterior'}
         onClick={() => scroll(-1)}
       >
-        <ChevronLeft size={40} />
+        <ChevronLeft size={35} />
       </button>
 
       <button
         className={'prox'}
         onClick={() => scroll(1)}
       >
-        <ChevronRight size={40} />
+        <ChevronRight size={35} />
       </button>
 
     </div>

@@ -1,0 +1,5 @@
+export { default as banner2a } from './banner2a.webp'
+export { default as banner2b } from './banner2b.webp'
+export { default as banner2c } from './banner2c.webp'
+export { default as banner2d } from './banner2d.webp'
+export { default as banner2e } from './banner2e.webp'
