@@ -1,96 +1,98 @@
 .banner {
     width: 100%;
     position: relative;
-}
 
-.banner .carrossel-corte {
-    overflow: hidden;
-    width: 100%;
 
-}
+    .carrossel-corte {
+        overflow: hidden;
+        width: 100%;
 
-.banner .carrossel {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    transition: transform 0.4s ease;
-}
+    }
 
-.banner img {
-    width: 100vw;
-    flex-shrink: 0;
-}
+    .carrossel {
+        display: flex;
+        flex-direction: row;
+        width: 100%;
+        transition: transform 0.4s ease;
+    }
 
-.banner button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 100%;
-    z-index: 20;
-    cursor: pointer;
-}
+    img {
+        width: 100vw;
+        flex-shrink: 0;
+    }
 
-.banner .anterior {
-    left: 0px;
-}
-
-.banner .prox {
-    right: 0px;
-}
-
-.banner .indicadores {
-    display: flex;
-    gap: 5px;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    top: 93%;
-    z-index: 5;
-}
-
-.banner .indicadores > span {
-    width: 8px;
-    height: 8px;
-    border: rgb(35, 150, 12) solid 1px;
-    border-radius: 100%;
-    transition: width 0.4s ease, border-radius 0.4s ease;
-}
-
-.banner .indicadores .ativa {
-    width: 20px;
-    border-radius: 40%;
-    background-color: rgb(35, 150, 12);
-}
-
-@media (min-width: 900px) {  
-    .banner button {
+    button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        width: 70px;
+        width: 40px;
+        height: 100%;
         z-index: 20;
         cursor: pointer;
     }
-    
-    .banner .indicadores {
-        gap: 10px;
+
+    .anterior {
+        left: 0px;
+    }
+
+    .prox {
+        right: 0px;
+    }
+
+    .indicadores {
+        display: flex;
+        gap: 5px;
+        position: absolute;
         left: 50%;
         transform: translateX(-50%);
         top: 93%;
         z-index: 5;
     }
 
-    .banner .indicadores > span {
-        width: 10px;
-        height: 10px;
+    .indicadores > span {
+        width: 8px;
+        height: 8px;
+        border: rgb(35, 150, 12) solid 1px;
+        border-radius: 100%;
+        transition: width 0.4s ease, border-radius 0.4s ease;
     }
 
-    .banner .indicadores .ativa {
-        width: 30px;
+    .indicadores .ativa {
+        width: 20px;
         border-radius: 40%;
         background-color: rgb(35, 150, 12);
+    }
+}
+@media (min-width: 900px) {  
+    .banner {
+        button {
+            top: 50%;
+            transform: translateY(-50%);
+            width: 70px;
+            z-index: 20;
+            cursor: pointer;
+        }
+        
+        .indicadores {
+            gap: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 93%;
+            z-index: 5;
+        }
+
+        .indicadores > span {
+            width: 10px;
+            height: 10px;
+        }
+
+        .indicadores .ativa {
+            width: 30px;
+            border-radius: 40%;
+            background-color: rgb(35, 150, 12);
+        }
     }
 }

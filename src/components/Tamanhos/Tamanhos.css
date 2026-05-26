@@ -1,7 +1,7 @@
 .tamanhos {
     display: flex;
     gap: 10px;
-    justify-content: left;
+    justify-content: flex-start;
     color: white;
 }
 .tamanhos>.tamanho{

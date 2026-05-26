@@ -7,7 +7,7 @@ import Produto from '../Produto/Produto.jsx'
 function BlocoProdutos({ titulo, produtos }) {
   const [posicao,setPosicao] = useState(0)
   const carrossel = useRef(null)
-  const larguraProduto = 270
+  const larguraProduto = 250
   const posicaoMax = (produtos.length - 5) * larguraProduto
   useEffect(() => {
     if (carrossel.current) {
@@ -31,9 +31,9 @@ function BlocoProdutos({ titulo, produtos }) {
           className="bloco-produtos"
           ref={carrossel}
           >
-            {produtos.map((produto) => (
-              <div className="item-bloco">
-                <Produto key={produto.id} produto={produto}/>
+            {produtos.map((produto, index) => (
+              <div className="item-bloco" key={index}>
+                <Produto produto={produto}/>
               </div>
             ))}
           </div>

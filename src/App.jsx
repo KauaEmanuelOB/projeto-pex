@@ -1,4 +1,4 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import './App.css'
 import Header from './components/Header/Header.jsx'
@@ -10,6 +10,21 @@ import Cadastro from './pages/Cadastro/Cadastro.jsx'
 import GuiaMedidas from './pages/GuiaMedidas/GuiaMedidas.jsx'
 import Carrinho from './pages/Carrinho/Carrinho.jsx'
 import Sobre from './pages/Sobre/Sobre.jsx'
+import PaginaProduto from './pages/PaginaProduto/PaginaProduto.jsx'
+
+function ScrollToTop() {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    window.scrollTo({
+    top: 0,
+    left: 0,
+    behavior: 'smooth'
+    })
+  }, [pathname])
+
+  return null
+}
 
 function App() {
   useEffect(() => {
@@ -17,22 +32,23 @@ function App() {
   },[])
 
   return (
-    <div>
+    <>
+      <ScrollToTop/>
       <Header/>
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/produtos' element={<Produtos/>}></Route>
+        <Route path="/produtos/:id/:slug" element={<PaginaProduto/>}/>
         <Route path='/login' element={<Login/>}></Route>
         <Route path='/cadastro' element={<Cadastro/>}></Route>
         <Route path='/guia-medidas' element={<GuiaMedidas/>}></Route>
-        <Route path='/login' element={<Login/>}></Route>
         <Route path='/sobre' element={<Sobre/>}></Route>
         <Route path='/carrinho' element={<Carrinho/>}></Route>
 
         <Route path="*" element={<h1>Página não encontrada! :(</h1>} />
       </Routes>
       <Footer/>
-    </div>
+    </>
   )
 }
 

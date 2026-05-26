@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, useMemo } from 'react'
 import { useSearchParams } from 'react-router-dom'
 import PageHeader from '../../components/PageHeader/PageHeader.jsx'
 import GridProdutos from '../../components/GridProdutos/GridProdutos.jsx'
@@ -19,14 +19,10 @@ function Produtos() {
     document.title = "Todos os produtos | Lize Fitwear"
   },[])
 
-  const [produtosFiltrados, setProdutosFiltrados] = useState(produtos)
-
-  const handleFiltro = () => {
-    const filtrados = produtos
+  const produtosFiltrados = useMemo(() => {
+    return produtos
       .filter(produto => {
-        if (produto.preco < precoMin || produto.preco > precoMax) {
-          return false
-        }
+        if (produto.preco < precoMin || produto.preco > precoMax) return false
         if (tamanho !== "") {
           if (!produto.tamanhos?.includes(tamanho)) return false
         }
@@ -37,9 +33,7 @@ function Produtos() {
         if (ordem === "3") return b.preco - a.preco
         return 0
       })
-    
-    setProdutosFiltrados(filtrados)
-  }
+  }, [ordem, precoMin, precoMax, tamanho])
 
   const [filtroAberto, setFiltroAberto] = useState(false)
 
@@ -80,7 +74,7 @@ function Produtos() {
               <input
                 id='precoMax'
                 type="number"
-                onChange={(e) => setPrecoMax(Number(e.target.value))}
+                onBlur={(e) => setPrecoMax(Number(e.target.value))}
               />
             </div>
 
@@ -88,13 +82,13 @@ function Produtos() {
               <label htmlFor="tamanho">Tamanho:</label>
               <select value={tamanho} onChange={(e) => setTamanho(e.target.value)}>
                 <option value="">Todos</option>
+                <option value="PP">PP</option>
                 <option value="P">P</option>
                 <option value="M">M</option>
                 <option value="G">G</option>
+                <option value="GG">GG</option>
               </select>
             </div>
-
-            <button onClick={handleFiltro}>Aplicar Filtros</button>
 
           </div>
         </section>

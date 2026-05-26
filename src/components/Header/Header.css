@@ -4,6 +4,11 @@ header {
     z-index: 1000;
     width: 100%;
 }
+header.sticky-on  {
+    .header-sec {
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
+    }
+}
 
 header {
 
@@ -33,7 +38,7 @@ header {
     }
     .pesquisa {
         align-items: center;
-        padding: 15px;
+        padding: 13px 15px;
         border-radius: 15px;
         width: calc(300px + 20vw); 
         justify-content: space-between;
@@ -107,13 +112,14 @@ header {
 @media (min-width: 979px) {
     header .header-sec {
         justify-content: center;
+        height: 90px;
     }
     header img { 
         max-width: 140px;
     }
     header .pesquisa-desktop {
         display: flex;
-        border: 2px solid rgba(0, 0, 0, 0.438);
+        box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
     }
     header .pesquisa-mobile, header .botao-pesquisa {
         display: none;
