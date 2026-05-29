@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { useCarrinho } from '../../../hooks/useCarrinho.jsx'
 import { ShoppingCart, Truck, Plus, Minus } from 'lucide-react'
 import './OpcoesProduto.css'
 
@@ -7,7 +8,7 @@ function OpcoesProduto( {produto} ) {
   const parcela = (preco, vezes) => preco/vezes
   const formatarMoeda = (valor) => `R$ ${valor.toFixed(2)}`
 
-  const [tamanho, setTamanho] = useState(produto.tamanhos[1])
+  const [tamanho, setTamanho] = useState(produto.tamanhos[0])
   const [quantidade, setQuantidade] = useState(1)
 
   const handleQtd = (valor) => {
@@ -16,6 +17,8 @@ function OpcoesProduto( {produto} ) {
       setQuantidade(novaQuantidade)
     }
   }
+
+  const { addCarrinho } = useCarrinho()
 
   return (
     <section className='opcoes'>
@@ -59,7 +62,7 @@ function OpcoesProduto( {produto} ) {
 
         <div className='botoes'>
           <button className='btn-comprar'>Comprar agora</button>
-          <button className='add-carrinho'><ShoppingCart/>Adicionar ao carrinho</button>
+          <button className='add-carrinho' onClick={() => addCarrinho(produto,quantidade,tamanho)}><ShoppingCart/>Adicionar ao carrinho</button>
         </div>
 
       </div>

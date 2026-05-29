@@ -66,6 +66,7 @@ function Produtos() {
               <input
                 id='precoMin'
                 type="number"
+                value={precoMin}
                 onChange={(e) => setPrecoMin(Number(e.target.value))}
                 />
             </div>
@@ -74,7 +75,8 @@ function Produtos() {
               <input
                 id='precoMax'
                 type="number"
-                onBlur={(e) => setPrecoMax(Number(e.target.value))}
+                value={precoMax}
+                onChange={(e) => setPrecoMax(Number(e.target.value))}
               />
             </div>
 

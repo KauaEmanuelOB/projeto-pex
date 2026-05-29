@@ -2,6 +2,8 @@ import { cjt1, cjt2, cjt3, cjt4, cjt5, cjt6, cjt7, cjt8, cjt9, cjt10, cjt11 } fr
 
 import bannerp1 from '../assets/produtosBanners/p1'
 import bannerp2 from '../assets/produtosBanners/p2'
+import bannerp3 from '../assets/produtosBanners/p3'
+import bannerp4 from '../assets/produtosBanners/p4'
 
 const produtos = [
   {
@@ -28,7 +30,8 @@ const produtos = [
     nome: 'Top flex Marsala Canelado',
     tamanhos: ['M','G'],
     preco: 65,
-    slug: 'top-flex-marsala-canelado'
+    slug: 'top-flex-marsala-canelado',
+    banner: bannerp3
   },
   {
     id: 4,
@@ -36,7 +39,8 @@ const produtos = [
     nome: 'Legging basic Caramelo Canelado',
     tamanhos: ['P','M'],
     preco: 90,
-    slug: 'legging-basic-caramelo-canelado'
+    slug: 'legging-basic-caramelo-canelado',
+    banner: bannerp4
   },
   {
     id: 5,

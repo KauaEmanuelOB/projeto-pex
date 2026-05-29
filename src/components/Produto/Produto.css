@@ -8,6 +8,7 @@
     margin: 0px;
     transition: transform 0.4s ease;
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
+    background-color: white;
 }
 .produto:hover {
     transform: scale(1.02);

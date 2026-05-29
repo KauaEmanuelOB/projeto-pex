@@ -4,18 +4,17 @@
     --laranja: #b45424;
     --verde: #8ba072;
     --rosa: #b6635d;
+    --fundo: #ebebeb;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
 }
 body {
-    font-family: 'Arial', sans-serif;
-    line-height: 1.6; 
-    background-color: white;
+    font-family: "Poppins", sans-serif;
+    background-color: var(--fundo);
 }
 a, a:hover {
     text-decoration: none;

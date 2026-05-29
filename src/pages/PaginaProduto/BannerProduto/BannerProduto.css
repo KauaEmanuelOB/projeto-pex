@@ -18,28 +18,7 @@
     width: 100%;
     flex-shrink: 0;
   }
-
-  button {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 100%;
-    z-index: 20;
-    cursor: pointer;
-  }
-
-  .anterior {
-    left: 0px;
-  }
-
-  .prox {
-    right: 0px;
-  }
-
+  
   .indicadores {
     display: flex;
     flex-direction: row;
@@ -57,7 +36,7 @@
 
 }
 
-@media (min-width: 900px) {  
+@media (min-width: 800px) {  
   .banner-produto {
     display: flex;
     flex-direction: row-reverse;
@@ -65,14 +44,6 @@
     .carrossel-corte {
       margin: auto;
       width: 85%;
-    }
-    button {
-      top: 50%;
-      transform: translateY(-50%);
-      width: 70px;
-      z-index: 20;
-      cursor: pointer;
-      display: none;
     }
     
     .indicadores {

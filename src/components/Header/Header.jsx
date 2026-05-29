@@ -1,5 +1,6 @@
 import { useState, useRef, useEffect } from 'react'
 import { Link } from 'react-router-dom'
+import { useCarrinho } from '../../hooks/useCarrinho.jsx'
 import logo from '../../assets/logo.webp'
 import { CircleUser, Search, ShoppingCart, Menu, Home, User, Shirt, Tag, BadgePercent, Ruler, Info } from 'lucide-react'
 import './Header.css'
@@ -31,6 +32,8 @@ function Header() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
   
+  const { totalItens } = useCarrinho()
+  
   return (
     <header className={sticky ? 'sticky-on' : ''}>
         <div className='header-sec'>
@@ -44,7 +47,9 @@ function Header() {
             <Link to='/'><img src={logo} alt="Logo LizeFitwear"/></Link>
           </div>
           <div className='header-restante'>
-            <Search className='lupa botao-pesquisa' size={25} onClick={() => setPesquisaAberta(!pesquisaAberta)}/>
+            <div className='icone' onClick={() => setPesquisaAberta(!pesquisaAberta)}>
+              <Search className='lupa botao-pesquisa' size={25}/>
+            </div>
             <div className={`pesquisa pesquisa-desktop`}>
               <input
                 type="text"
@@ -53,8 +58,11 @@ function Header() {
               />
               <Search className='lupa' size={30}/>
             </div>
-            <Link to='/login'><CircleUser size={25}/></Link>
-            <Link to='/' ><ShoppingCart size={25}/></Link>
+            <Link to='/login' className='icone'><CircleUser size={25}/></Link>
+            <Link to='/carrinho' className='carrinho icone' >
+              <ShoppingCart size={25}/>
+              {totalItens > 0 && <div className='num-carrinho'>{totalItens}</div>}
+            </Link>
           </div>
         </div>
     

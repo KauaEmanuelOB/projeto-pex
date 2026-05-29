@@ -1,18 +1,10 @@
-:root {
-    --cor-fundo: #ffffff;
-    --cor-fonte: #000000;
-}
-
 footer {
     margin-top: 20px;
     border-top: 1px solid rgba(0, 0, 0, 0.205);
     padding: 15px 15px;
-    background-color: var(--cor-fundo);
+    background-color: white;
     font-size: 1.0em;
-    color: var(--cor-fonte);
-}
-
-footer {
+    color: black;
     
     .grid-footer {
         display: grid;
@@ -28,6 +20,10 @@ footer {
         padding: 20px 0px;
         min-width: fit-content;
         overflow: hidden;
+
+        >p {
+            display: none;
+        }
     }
     .titulo {
         font-size: 1.1em;
@@ -76,7 +72,6 @@ footer {
         padding-bottom: 10px;
         border-bottom: 2px solid rgba(0, 0, 0, 0.205);
     }
-
     .itens-formas {
         display: flex;
         gap: 15px;
@@ -87,20 +82,6 @@ footer {
         max-width: 100%;
     }
     
-    section>p {
-        display: none;
-    }
-
-    .whatsapp {
-        color: var(--cor-fonte);
-    }
-    .email {
-        color: var(--cor-fonte);
-    }
-    .instagram {
-        color: var(--cor-fonte);
-    }
-
 }
 
 @media (min-width: 950px) {
