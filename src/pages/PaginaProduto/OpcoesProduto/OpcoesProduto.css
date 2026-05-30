@@ -7,7 +7,7 @@
   .comprar {
     display: flex;
     flex-direction: column;
-    
+    background-color: white;
     gap: 20px;
     
     h2 {
@@ -119,6 +119,7 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
+    background-color: white;
 
     label {
       display: flex;
