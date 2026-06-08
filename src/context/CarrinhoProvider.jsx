@@ -43,6 +43,18 @@ export function CarrinhoProvider({ children }) {
     ))
   }
 
+  const comprarAgora = (produto, quantidade, tamanho) => {
+    setCarrinho([{
+        id: produto.id,
+        nome: produto.nome,
+        preco: produto.preco,
+        imagem: produto.img,
+        slug: produto.slug,
+        tamanho,
+        quantidade
+      }])
+  }
+
   const totalItens = carrinho.reduce((sum, item) => sum + item.quantidade, 0)
   const precoTotal = carrinho.reduce((sum, item) => sum + (item.preco * item.quantidade), 0)
 
@@ -52,6 +64,7 @@ export function CarrinhoProvider({ children }) {
       addCarrinho,
       removerCarrinho,
       attQuantidade,
+      comprarAgora,
       totalItens,
       precoTotal
     }}>

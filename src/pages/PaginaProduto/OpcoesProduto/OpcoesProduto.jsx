@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { useCarrinho } from '../../../hooks/useCarrinho.jsx'
+import { Link } from 'react-router-dom'
 import { ShoppingCart, Truck, Plus, Minus } from 'lucide-react'
 import './OpcoesProduto.css'
 
@@ -18,7 +19,7 @@ function OpcoesProduto( {produto} ) {
     }
   }
 
-  const { addCarrinho } = useCarrinho()
+  const { addCarrinho, comprarAgora } = useCarrinho()
 
   return (
     <section className='opcoes'>
@@ -61,7 +62,7 @@ function OpcoesProduto( {produto} ) {
         </div>
 
         <div className='botoes'>
-          <button className='btn-comprar'>Comprar agora</button>
+          <Link to='/finalizar-compra' onClick={() => comprarAgora(produto,quantidade,tamanho)}><button className='btn-comprar'>Comprar agora</button></Link>
           <button className='add-carrinho' onClick={() => addCarrinho(produto,quantidade,tamanho)}><ShoppingCart/>Adicionar ao carrinho</button>
         </div>
 

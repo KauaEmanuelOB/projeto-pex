@@ -65,7 +65,7 @@ function Carrinho() {
               </div>
               <div className='total'><p>Total:</p> <p><strong>{formatarMoeda(precoTotal)}</strong></p></div>
             </div>
-            <button>Finalizar compra</button>
+            <Link to='/finalizar-compra'><button>Finalizar compra</button></Link>
           </div>
 
         </section>

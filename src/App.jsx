@@ -11,6 +11,8 @@ import GuiaMedidas from './pages/GuiaMedidas/GuiaMedidas.jsx'
 import Carrinho from './pages/Carrinho/Carrinho.jsx'
 import Sobre from './pages/Sobre/Sobre.jsx'
 import PaginaProduto from './pages/PaginaProduto/PaginaProduto.jsx'
+import FinalizarCompra from './pages/FinalizarCompra/FinalizarCompra.jsx'
+import CompraAprovada from './pages/CompraAprovada/CompraAprovada.jsx'
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -44,8 +46,10 @@ function App() {
         <Route path='/guia-medidas' element={<GuiaMedidas/>}></Route>
         <Route path='/sobre' element={<Sobre/>}></Route>
         <Route path='/carrinho' element={<Carrinho/>}></Route>
+        <Route path='/finalizar-compra' element={<FinalizarCompra/>}></Route>
+        <Route path='/compra-aprovada' element={<CompraAprovada/>}></Route>
 
-        <Route path="*" element={<h1>Página não encontrada! :(</h1>} />
+        <Route path="*" element={<main><h1>Página não encontrada! :(</h1></main>} />
       </Routes>
       <Footer/>
     </>

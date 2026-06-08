@@ -80,7 +80,7 @@
 
 @media (min-width: 700px) {
     .produto>img {
-        height: 320px;
+        height: 330px;
     }
     .produtoInfo>.preco {
         font-size: 1.3em;

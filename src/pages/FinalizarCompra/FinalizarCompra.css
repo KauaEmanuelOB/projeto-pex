@@ -1,13 +1,13 @@
-main.page-carrinho {
+main.page-finalizar {
   display: flex;
   flex-direction: column;
   padding: 40px 0px;
 
-  .itens-carrinho {
+  .pagamento {
     box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
     background-color: white;
 
-    .itens-carrinho-in {
+    .pagamento-in {
       display: flex;
       flex-direction: column;
       font-size: 14px;
@@ -15,53 +15,36 @@ main.page-carrinho {
       >article {
         padding: 10px;
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         justify-content: space-between;
         gap: 20px;
         border-bottom: rgba(87, 87, 87, 0.582) solid 2px;
 
-        >a {
-          width: 20%;
-          line-height: 0;
-          }
-        
-        .sec2 {
-          width: 60%;
+        >div {
+          width: 100%;
+          padding: 20px;
+          box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
+          border-radius: 10px;
           display: flex;
-          flex-direction: column;
-          justify-content: space-between;
-          align-items: start;
-        }
-        .sec3 {
-          width: 20%;
-          display: flex;
-          flex-direction: column-reverse;
-          justify-content: space-between;
-          align-items: end;
-          font-size: 17px;
-
-          .lixo:hover {
-            color: rgb(255, 70, 70);
-            cursor: pointer;
-          }
-        }
-      
-        .quantidade {
-          display: flex;
-          flex-direction: row;
           align-items: center;
           justify-content: space-between;
-          border-radius: 10px;
-          box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
-          width: 60%;
+          background-color: white;
+          cursor: pointer;
 
-          button {
+          >div {
             display: flex;
             align-items: center;
-            width: fit-content;
-            padding: 10px 10px;
+            gap: 5px;
+
+            >img {
+              height: 20px;
+            }
           }
         }
+        >div:hover {
+          background-color: rgb(241, 241, 241);
+        }
+
       }
     }
   }
@@ -118,26 +101,32 @@ main.page-carrinho {
 }
 
 @media (min-width: 1000px) {
-  main.page-carrinho {
+  main.page-finalizar {
     width: 1100px;
     margin: auto;
     flex-direction: row;
     gap: 40px;
 
-    .itens-carrinho {
+    .pagamento {
       width: 70%;
       border-radius: 10px;
       padding-bottom: 15px;
-      height: fit-content;
 
-      .itens-carrinho-in {
+      .pagamento-in {
 
         >article {
           padding: 15px;
           gap: 20px;
 
-          >a {
-            width: 13%;
+
+          >div {
+            width: 100%;
+            padding: 20px;
+            box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.199);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
           }
         }
 

@@ -40,6 +40,7 @@
   .banner-produto {
     display: flex;
     flex-direction: row-reverse;
+    padding: 0px 20px;
 
     .carrossel-corte {
       margin: auto;
